@@ -14,7 +14,7 @@
 
  routes.post('/register',registerUser)
  routes.post('/login',loginUser)
- routes.get('/',authmiddleware, authorize('admin'), getUsers,)
+ routes.get('/users',authmiddleware, authorize('admin'), getUsers,)
  routes.get('/profile',authmiddleware,(req,res)=>{
     return res.status(200).json(
         {
